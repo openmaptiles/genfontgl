@@ -8,28 +8,25 @@ var fm = require('fontmachine');
 		var data = fs.readFileSync(fname);
 		console.log('Process '+fname);
         fm.makeGlyphs({font: data, fileType: 'ttf'}, function p(error,result){
-            //console.log(result);
             var folder=result.name;
 
              if(!fs.existsSync(folder)){
                  fs.mkdirSync(folder, 0766, function(err){
                    if(err){ 
                      console.log(err);
-                     response.send("ERROR! Can't make the directory! \n");    // echo the result back
+                     response.send("ERROR! Can't make the directory! \n");
                    }
                  });   
              }
 
             for(var index in result.stack) { 
                 var font=result.stack[index].name;
-                var fontData=result.stack[index].name;
+                var fontData=result.stack[index].data;
 
-                fs.writeFile(folder+'/'+font, data, function(err) {
+                fs.writeFile(folder+'/'+font, fontData, function(err) {
                     if(err) {
                         return console.log(err);
                     }
-
-                    //console.log("The file was saved!");
                 }); 
             }
 
