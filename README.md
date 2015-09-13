@@ -1,2 +1,5 @@
-# genfontgl
-Create a fontstack folder from a TTF font for Mapbox GL
+genfontgl
+-----
+A simple command line tool to generate fonts for Mapbox GL via fontmachine.
+
+Usage: ```genfontgl OpenSans-Regular.ttf```
