@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "fontmachine": "0.0.3"
+    "fontnik": "^0.3.2",
+    "queue-async": "^1.0.7"
   },
   "repository": {
     "type": "git",
