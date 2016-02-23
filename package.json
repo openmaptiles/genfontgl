@@ -4,11 +4,12 @@
   "description": "Create a fontstack folder from a TTF font for Mapbox GL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "genfontgl": "node index.js"
   },
   "dependencies": {
-    "fontnik": "^0.3.2",
-    "queue-async": "^1.0.7"
+    "d3-queue": "^2.0.2",
+    "fontnik": "^0.4.4"
   },
   "repository": {
     "type": "git",
