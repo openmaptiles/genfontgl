@@ -6,7 +6,7 @@ var fontnik = require('fontnik');
 var d3 = require('d3-queue');
 
     try {
-        var fname = process.argv[2];
+        var fname = path.basename(process.argv[2]);
 
 	var fontstack = fs.readFileSync(fname);
         console.log('Process '+fname);
