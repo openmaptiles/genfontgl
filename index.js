@@ -11,6 +11,7 @@ var d3 = require('d3-queue');
         console.log('Process '+fname);
 
         var folder=fname.slice(0, -4).replace('-','');
+        if (process.argv[3]) { folder = process.argv[3] + '/' + folder; }
     } catch (e) {
         console.error('error: could not read font '+e)
         return;
