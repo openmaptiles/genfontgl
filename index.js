@@ -11,7 +11,13 @@ var d3 = require('d3-queue');
         console.log('Process '+fname);
 
         var folder=fname.slice(0, -4).replace('-','');
-        if (process.argv[3]) { folder = process.argv[3] + '/' + folder; }
+        if (process.argv[3]) { 
+            if (fs.existsSync(process.argv[3])) {
+                folder = process.argv[3] + '/' + folder;
+            } else {
+                console.error('Path ' + process.argv[3] + ' does not exist. Using default.');
+            }             
+        }
     } catch (e) {
         console.error('error: could not read font '+e)
         return;
