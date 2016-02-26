@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var path = require('path');
 var fontnik = require('fontnik');
 var d3 = require('d3-queue');
 
@@ -13,7 +14,7 @@ var d3 = require('d3-queue');
         var folder=fname.slice(0, -4).replace('-','');
         if (process.argv[3]) { 
             if (fs.existsSync(process.argv[3])) {
-                folder = process.argv[3] + '/' + folder;
+                folder = path.join(process.argv[3], folder);
             } else {
                 console.error('Path ' + process.argv[3] + ' does not exist. Using default.');
             }             
