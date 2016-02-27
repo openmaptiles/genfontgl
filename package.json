@@ -1,6 +1,6 @@
 {
   "name": "genfontgl",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Create a fontstack folder from a TTF font for Mapbox GL",
   "main": "index.js",
   "scripts": {
