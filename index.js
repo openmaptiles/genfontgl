@@ -6,12 +6,12 @@ var fontnik = require('fontnik');
 var d3 = require('d3-queue');
 
     try {
-        var fname = path.basename(process.argv[2]);
+        var fname = process.argv[2];
 
 	var fontstack = fs.readFileSync(fname);
         console.log('Process '+fname);
 
-        var folder=fname.slice(0, -4).replace('-','');
+        var folder = path.basename(fname).slice(0, -4).replace('-','');
         if (process.argv[3]) { 
             if (fs.existsSync(process.argv[3])) {
                 folder = path.join(process.argv[3], folder);
