@@ -11,7 +11,8 @@ var d3 = require('d3-queue');
 	var fontstack = fs.readFileSync(fname);
         console.log('Process '+fname);
 
-        var folder = path.basename(fname).slice(0, -4).replace('-','');
+	var rex = /([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g;
+        var folder = path.basename(fname).slice(0, -4).replace('-','').replace(rex, '$1$4 $2$3$5');
         if (process.argv[3]) { 
             if (fs.existsSync(process.argv[3])) {
                 folder = path.join(process.argv[3], folder);
