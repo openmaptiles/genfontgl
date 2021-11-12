@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "d3-queue": "^2.0.2",
-    "fontnik": "^0.4.4"
+    "fontnik": "https://github.com/mapbox/node-fontnik.git"
   },
   "repository": {
     "type": "git",
